@@ -1,0 +1,176 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #f4f4f9, #eaeaf5);
+    color: #333;
+}
+
+.container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    text-align: center;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+/* Input and Button Styles */
+label {
+    margin: 10px 0 5px;
+    display: block;
+    font-weight: bold;
+    font-size: 14px;
+    color: #555;
+}
+
+input,
+select,
+button {
+    width: 100%;
+    margin-bottom: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+input::placeholder {
+    color: #aaa;
+}
+
+button {
+    background: #007BFF;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+/* Bars Container */
+.bars {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-top: 20px;
+    height: 300px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 10px;
+    background: #fafafa;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Bar Styles */
+.bar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 3px;
+    flex-grow: 1;
+    max-width: 30px;
+}
+
+.bar {
+    margin-top: auto;
+    background: #007BFF;
+    width: 20px;
+    border-radius: 5px 5px 0 0;
+    transition: all 0.4s ease-in-out;
+}
+
+.bar-label {
+    margin-top: 5px;
+    font-size: 12px;
+    color: #555;
+    text-align: center;
+}
+
+/* Highlighted Bar During Sorting */
+.bar.highlight {
+    background: #FF5733;
+    box-shadow: 0px 4px 8px rgba(255, 87, 51, 0.7);
+}
+
+/* Splash Screen */
+#splash {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #007BFF, #6c63ff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    z-index: 1000;
+    animation: fade-out 1s ease forwards;
+    animation-delay: 2s;
+}
+
+#splash-content {
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    animation: scale-up 1s ease;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: auto;
+}
+
+@keyframes fade-out {
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+@keyframes scale-up {
+    0% {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .bars {
+        height: 200px;
+    }
+
+    .bar {
+        width: 15px;
+    }
+
+    .bar-label {
+        font-size: 10px;
+    }
+}
