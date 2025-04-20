@@ -1,8 +1,4 @@
-Sure! Here's a **formatted README** for your **Sorting Algorithm Visualizer** project, with emphasis on **HTML, CSS, and JS**, following the style of your previous README:
 
----
-
-```markdown
 <h1 align="center">📊 Sorting Algorithm Visualizer</h1>
 <p align="center">
   A web-based tool to visually demonstrate and compare the performance of sorting algorithms. See sorting algorithms in action with interactive visualizations.
